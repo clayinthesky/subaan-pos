@@ -96,7 +96,9 @@ The named volume retains SQLite, sessions and images. On a real host, set the ac
 
 The raw source, Composer lockfile, migration, seeder, launch script, Docker configuration and documentation are included. The unpacked local project runs at `http://localhost:8080/`; this is not a hosted submission URL.
 
-The GitHub repository and hosted public application links remain pending because the available GitHub and PHP hosting connectors were disabled by the workspace administrator. No links are fabricated. The available Sites deployment interface accepts Workers/static artifacts rather than this PHP application. Publish this exact project to a GitHub repository and a PHP-capable host with an authorized account, then submit both actual links. See `docs/deployment.md` for the release procedure.
+Source repository: [clayinthesky/subaan-pos](https://github.com/clayinthesky/subaan-pos). The repository is private; the owner must grant access to anyone reviewing the submission.
+
+A hosted public application link remains pending. The local development URL is not a hosted submission URL. Deploy this project to a PHP-capable host with persistent storage, then submit its actual HTTPS link together with the repository link. See `docs/deployment.md` for the release procedure.
 
 ## Framework references
 

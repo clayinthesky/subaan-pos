@@ -1,10 +1,10 @@
 # Release and submission
 
-The source package is ready for a PHP-capable host. A repository URL and public app URL have not been created in this session. The available GitHub, Render and other hosting connectors were disabled by the workspace administrator. Sites accepts static or Worker artifacts and cannot directly run this CodeIgniter/PHP project.
+The source is available in the private [clayinthesky/subaan-pos repository](https://github.com/clayinthesky/subaan-pos). The owner can grant access to the professor or other reviewers in GitHub's repository settings. A public application URL has not yet been deployed.
 
-## GitHub publication
+## Repository maintenance
 
-Create a repository named `subaan-pos` in an authorized GitHub account. Open a terminal in this project, initialize Git if necessary, add the source, and commit it. Use the exact remote URL returned by GitHub when connecting the local repository, then push the main branch. The `.gitignore` excludes `.env`, vendor dependencies, runtime database files, uploads and sessions. Commit `composer.lock` and the migration/seeder files. Keep account credentials out of the repository.
+Commit changes to the main branch and push them to the existing origin remote. The `.gitignore` excludes `.env`, vendor dependencies, runtime databases, uploads and sessions. Keep `composer.lock`, migrations and seeders committed. Keep staff credentials out of the repository.
 
 ## PHP hosting release
 
