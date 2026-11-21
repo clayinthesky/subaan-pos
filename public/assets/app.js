@@ -1,0 +1,4 @@
+document.querySelectorAll('form[data-confirm]').forEach(f=>f.addEventListener('submit',e=>{if(!confirm(f.dataset.confirm))e.preventDefault()}));
+const product=document.querySelector('#product'),qty=document.querySelector('#quantity');
+if(product){const update=()=>{const p=product.selectedOptions[0];const stock=Number(p.dataset.stock||0);qty.max=stock||2147483647;document.querySelector('#available').textContent=p.value?stock+' units':'—';document.querySelector('#total').textContent=new Intl.NumberFormat('en-PH',{style:'currency',currency:'PHP'}).format(Number(p.dataset.price||0)*Number(qty.value||0));};product.addEventListener('change',update);qty.addEventListener('input',update);update();}
+document.querySelectorAll('form').forEach(f=>f.addEventListener('submit',()=>{if(f.id==='sale-form'){const b=f.querySelector('button');b.disabled=true;b.textContent='Recording sale…';}}));

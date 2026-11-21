@@ -1,0 +1,7 @@
+vendor
+.git
+.env
+writable/*.sqlite*
+writable/uploads/*
+writable/logs/*
+writable/session/*

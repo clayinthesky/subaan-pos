@@ -1,0 +1,12 @@
+services:
+  pos:
+    build: .
+    ports:
+      - "8080:80"
+    environment:
+      CI_ENVIRONMENT: production
+      app.baseURL: http://localhost:8080/
+    volumes:
+      - pos-data:/var/www/html/writable
+volumes:
+  pos-data:

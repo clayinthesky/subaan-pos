@@ -1,0 +1,30 @@
+{
+    "name": "oracle-subaan/point-of-sale",
+    "description": "IT0049 complete point-of-sale system for products, customers, staff and sales",
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": "^8.2",
+        "codeigniter4/framework": "^4.7",
+        "ext-bcmath": "*",
+        "ext-gd": "*",
+        "ext-fileinfo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Config\\": "app/Config/"
+        },
+        "exclude-from-classmap": [
+            "**/Database/Migrations/**"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "python tests/http_integration.py"
+    }
+}
