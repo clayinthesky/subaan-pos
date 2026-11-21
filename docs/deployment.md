@@ -1,6 +1,6 @@
 # Release and submission
 
-The source is available in the private [clayinthesky/subaan-pos repository](https://github.com/clayinthesky/subaan-pos). The owner can grant access to the professor or other reviewers in GitHub's repository settings. A public application URL has not yet been deployed.
+The source is available in the public [clayinthesky/subaan-pos repository](https://github.com/clayinthesky/subaan-pos). Reviewers can read the source without signing in. A public application URL has not yet been deployed.
 
 ## Repository maintenance
 

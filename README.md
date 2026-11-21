@@ -29,7 +29,7 @@ php spark db:seed DemoSeeder
 powershell -ExecutionPolicy Bypass -File .\run.ps1
 ```
 
-`pos:staff` asks for a username, full name and password. Use 12Ã¢â‚¬â€œ72 characters for passwords. It stores a password hash, never a plaintext password. The CLI prompt is visible, so create the account in a private terminal. The optional `DemoSeeder` adds six stationery products with prices and stock. It creates no customer identities, transactions or shared passwords, and skips a nonempty product catalog. Skip that command for an empty store.
+`pos:staff` asks for a username, full name and password. Use 12 to 72 characters for passwords. It stores a password hash, never a plaintext password. The CLI prompt is visible, so create the account in a private terminal. The optional `DemoSeeder` adds six stationery products with prices and stock. It creates no customer identities, transactions or shared passwords, and skips a nonempty product catalog. Skip that command for an empty store.
 
 On Linux/macOS, copy `.env.example` to `.env`, run the same Composer/migration/account commands, and start development with:
 
@@ -69,7 +69,7 @@ Controllers handle HTTP input and validation; models handle persistence and quer
 
 `SaleRecorder` begins a database transaction and conditionally decrements stock only when the requested quantity is available. This database write prevents two sale requests from both consuming the same units. It then reads the locked product price, computes an exact decimal total with BCMath, and inserts the sale. Any error rolls back the stock change. Totals above DECIMAL(10,2)'s limit are rejected. One-use session form tokens prevent accidental duplicate checkout submissions from the same session. CSRF tokens regenerate after each POST, so an old browser tab may require a reload.
 
-Images are restricted to JPEG, PNG and WebP, at most 2 MB, 16 megapixels, and 6000 pixels per side. GD re-encodes them to JPEG under random filenames in `writable/uploads`, outside the public document root. Product images fit within 1000 Ãƒâ€” 1000 pixels; avatars are cropped to 256 Ãƒâ€” 256. Authenticated media delivery sets a fixed JPEG content type. The original upload is never served. Transparent images become JPEG and do not retain transparency. Replaced images are retained on disk; remove unreferenced files during planned maintenance.
+Images are restricted to JPEG, PNG and WebP, at most 2 MB, 16 megapixels, and 6000 pixels per side. GD re-encodes them to JPEG under random filenames in `writable/uploads`, outside the public document root. Product images fit within 1000 x 1000 pixels; avatars are cropped to 256 x 256. Authenticated media delivery sets a fixed JPEG content type. The original upload is never served. Transparent images become JPEG and do not retain transparency. Replaced images are retained on disk; remove unreferenced files during planned maintenance.
 
 ## Verification
 
@@ -94,9 +94,11 @@ The named volume retains SQLite, sessions and images. On a real host, set the ac
 
 ## Submission status
 
+See the [assignment requirements review](docs/requirements-review.md) for the implementation mapping and the remaining hosted application requirement.
+
 The raw source, Composer lockfile, migration, seeder, launch script, Docker configuration and documentation are included. The unpacked local project runs at `http://localhost:8080/`; this is not a hosted submission URL.
 
-Source repository: [clayinthesky/subaan-pos](https://github.com/clayinthesky/subaan-pos). The repository is private; the owner must grant access to anyone reviewing the submission.
+Source repository: [clayinthesky/subaan-pos](https://github.com/clayinthesky/subaan-pos). The repository is public and can be reviewed without signing in.
 
 A hosted public application link remains pending. The local development URL is not a hosted submission URL. Deploy this project to a PHP-capable host with persistent storage, then submit its actual HTTPS link together with the repository link. See `docs/deployment.md` for the release procedure.
 
